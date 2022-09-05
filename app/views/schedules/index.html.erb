@@ -3,7 +3,7 @@
 
   <% schedules.each do |schedule| %>
     <div>
-      <%= link_to schedule.name, edit_schedule_path(schedule.id) %>
+      <%= link_to schedule.name, edit_schedule_path(schedule.id), method: :get %>
       <%= schedule.work_time_1.name %>
       <% if schedule.work_time_2_id != 1 %>
         <%= schedule.work_time_2.name %>

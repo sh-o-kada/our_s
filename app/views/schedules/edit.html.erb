@@ -1,7 +1,7 @@
 <div class="contents row">
   <div class="container">
     <h3>シフト再提出</h3>
-    <%= form_with(model: @schedules, local: true) do |form| %>
+    <%= form_with(model: @schedule, local: true) do |form| %>
       <%= form.date_select :start_time %>
       <%= form.collection_select(:name, User.all, :id, :name, {}) %>
       <%= form.collection_select(:work_time_1_id, WorkTime1.all, :id, :name, {}) %>
