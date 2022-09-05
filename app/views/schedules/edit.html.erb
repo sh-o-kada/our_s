@@ -1,0 +1,13 @@
+<div class="contents row">
+  <div class="container">
+    <h3>編集する</h3>
+    <%# 仮置き、プルダウンメニューに変更予定 %>
+    <%= form_with(model: @schedule, local: true) do |form| %>
+      <%= form.text_field :name, placeholder: "名前" %>
+      <%= form.text_field :work_time, placeholder: "勤務時間帯" %>
+      <%= form.text_field :start_time, placeholder: "勤務日" %>
+      <%= form.submit "再提出" %>
+    <% end %>
+    <%# 仮置き、プルダウンメニューに変更予定 %>
+  </div>
+</div>
