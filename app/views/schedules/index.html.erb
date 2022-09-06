@@ -1,15 +1,45 @@
 <%= month_calendar events: @schedules do |date, schedules| %>
   <%= date.day %>
 
+  <%= link_to "<提出する>", new_schedule_path, class: "send_schedule" %>
   <% schedules.each do |schedule| %>
     <div>
-      <%= link_to schedule.name, edit_schedule_path(schedule.id), method: :get %>
-      <%= schedule.work_time_1.name %>
+      <% if user_signed_in? && current_user.id == schedule.user_id %>
+        <%= link_to schedule.user.name, edit_schedule_path(schedule.id) %>
+      <% else %>
+        <%= schedule.user.name %>
+      <% end %>
+
+      <% if schedule.work_time_1_id == 2 %>
+        <p class="early_shift"><%= schedule.work_time_1.name %></p>
+      <% elsif schedule.work_time_1_id == 3 %>
+        <p class="day_shift"><%= schedule.work_time_1.name %></p>
+      <% elsif schedule.work_time_1_id == 4 %>
+        <p class="late_shift"><%= schedule.work_time_1.name %></p>
+      <% elsif schedule.work_time_1_id == 5 %>
+        <p class="all_shift"><%= schedule.work_time_1.name %></p>
+      <% end %>
       <% if schedule.work_time_2_id != 1 %>
-        <%= schedule.work_time_2.name %>
+        <% if schedule.work_time_2_id == 2 %>
+          <p class="early_shift"><%= schedule.work_time_2.name %></p>
+        <% elsif schedule.work_time_2_id == 3 %>
+          <p class="day_shift"><%= schedule.work_time_2.name %></p>
+        <% elsif schedule.work_time_2_id == 4 %>
+          <p class="late_shift"><%= schedule.work_time_2.name %></p>
+        <% elsif schedule.work_time_2_id == 5 %>
+          <p class="all_shift"><%= schedule.work_time_2.name %></p>
+        <% end %>
       <% end %>
       <% if schedule.work_time_3_id != 1 %>
-        <%= schedule.work_time_3.name %>
+        <% if schedule.work_time_3_id == 2 %>
+          <p class="early_shift"><%= schedule.work_time_3.name %></p>
+        <% elsif schedule.work_time_3_id == 3 %>
+          <p class="day_shift"><%= schedule.work_time_3.name %></p>
+        <% elsif schedule.work_time_3_id == 4 %>
+          <p class="late_shift"><%= schedule.work_time_3.name %></p>
+        <% elsif schedule.work_time_3_id == 5 %>
+          <p class="all_shift"><%= schedule.work_time_3.name %></p>
+        <% end %>
       <% end %>
     </div>
   <% end %>

@@ -1057,3 +1057,49 @@ footer p {
 .search-form .search-btn {
   width: 10%;
 }
+
+.send_schedule{
+  font-size: 12px;
+  font-weight: 800;
+  color: #FF9933;
+}
+
+.early_shift{
+  font-size: 12px;
+  font-weight: 800;
+  color: #FF3333;
+  display: inline;
+  padding: 1px 0 0 2px;
+  border: solid 2px;
+  border-radius: 10px;
+}
+
+.day_shift{
+  font-size: 12px;
+  font-weight: 800;
+  color: #33CC66;
+  display: inline;
+  padding: 1px 0 0 2px;
+  border: solid 2px;
+  border-radius: 10px;
+}
+
+.late_shift{
+  font-size: 12px;
+  font-weight: 800;
+  color: #3333FF;
+  display: inline;
+  padding: 1px 0 0 3px;
+  border: solid 2px;
+  border-radius: 10px;
+}
+
+.all_shift{
+  font-size: 14px;
+  font-weight: 800;
+  color: #FF99FF;
+  display: inline;
+  padding: 1px 0 0 3px;
+  border: solid 2px;
+  border-radius: 10px;
+}
