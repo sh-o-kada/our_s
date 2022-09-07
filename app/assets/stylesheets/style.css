@@ -707,8 +707,8 @@ form input[type="submit"] {
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #57C3E9;
-  color: #57C3E9;
+  border: 2px solid #00FF66;
+  color: #00FF66;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -1058,6 +1058,29 @@ footer p {
   width: 10%;
 }
 
+.calendar-heading{
+  height: 50px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 50px;
+}
+
+.wday-0{
+  background-color: #FFEEFF;
+}
+
+.wday-6{
+  background-color: #EEFFFF;
+}
+
+.prev-month a{
+  display: none;
+}
+
+.next-month a{
+  display: none;
+}
+
 .send_schedule{
   font-size: 12px;
   font-weight: 800;
@@ -1095,7 +1118,7 @@ footer p {
 }
 
 .all_shift{
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 800;
   color: #FF99FF;
   display: inline;
