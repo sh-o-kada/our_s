@@ -1,6 +1,7 @@
 class SchedulesController < ApplicationController
   def index
-    @schedules = Schedule.order("user_id ASC")
+    @schedules = Schedule.includes(:user).order(:user_id)
+    # orderが機能していない。原因不明。
   end
 
   def new

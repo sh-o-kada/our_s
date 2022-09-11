@@ -1,0 +1,17 @@
+.remember_me{
+  display: flex;
+}
+
+.remember_me_check_box{
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+.remember_me_text{
+  font-size: 14px;
+}
+
+.helps{
+  font-size: 14px;
+}

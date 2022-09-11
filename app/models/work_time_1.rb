@@ -4,7 +4,7 @@ class WorkTime1 < ActiveHash::Base
     { id: 2, name: "早番" },
     { id: 3, name: "日勤" },
     { id: 4, name: "遅番" },
-    { id: 5, name: "終日" },
+    { id: 5, name: "休み" },
   ]
 
   include ActiveHash::Associations
